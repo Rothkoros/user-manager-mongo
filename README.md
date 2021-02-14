@@ -1,9 +1,11 @@
 # user-manager-mongo
+first npm i 
+
 In compass make database called user-manager.
 
-Make users collections.
+Make collections name users.
 
-in terminal in text editor of project type: node app.js.
-it will take you to the create users page. You can either create a user and it will direct you or you can navigate to the user listing page. 
+in terminaltype: node app.js.
+go to localhost:3000 it will take you to create users page
 
-The initial page will be blank on the user listing until you make a user. I did not add default users :( 
+The user listing page will be blank on the user listing until you make a user. I did not add default users :( 

@@ -60,7 +60,6 @@ app.get("/edituser", (request, response) => {
   const paramId = request.query.userid;
   
   Users.findOne({id: paramId}, (err, data) => {
-    console.log(data)
     if (err) return console.log(`Seems like we ran into an error:s ${err}`)
   
     else{
@@ -88,7 +87,7 @@ app.post("/create", (request, response) => {
   }
 });
 app.post("/updateUser", (request, response) => {
-
+ 
   const userId = request.query.userid;
   const requestBody = request.body;
   Users.findOneAndUpdate({ id: userId}, {$set: {
@@ -114,7 +113,6 @@ app.post("/deleteUser", (req, res) => {
 });
 
 app.get("/searchName", (request, response)=>{
-  console.log(request.query.search);
   Users.find({$text: {$search: request.query.search}}, null, (err, data)=>{
     if (err) console.log(err); 
     response.render("userlisting", {user: data})
